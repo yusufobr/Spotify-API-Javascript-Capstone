@@ -50,7 +50,7 @@ Will start by building the core functionalities. At the very beginning the web w
 ![image](https://github.com/harshi0102/JS-Capstone-Project/assets/108334376/50ef418d-41f6-4f03-a7f7-e3ab30360948) -->
 
 <p align="center">
-  <img src="./src/assets/js-01.png" alt="Basic UI" width="1000px" />
+  <img src="./src/assets/js-01.PNG" alt="Basic UI" width="1000px" />
 </p>
 <p align="center">
   <img src="./src/assets/js-03.png" alt="Basic UI" width="350px" />
