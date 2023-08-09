@@ -2,7 +2,7 @@ export const url = 'https://shazam.p.rapidapi.com/charts/track?locale=en-US&page
 export const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '4383b7de5fmsh9eaa79b02a46491p1f9731jsn4089d17d625f',
+    'X-RapidAPI-Key': 'd0af0bcdb1msh4547e68b9e65aa2p16dec0jsnbc6afde93c67',
     'x-rapidapi-host': 'shazam.p.rapidapi.com',
   },
 };
