@@ -6,24 +6,17 @@ const cards = document.getElementById('cards');
 const renderCards = (array) => {
   let htmlToAppend = '';
   array.forEach((data) => {
+
+    const artistsAlias = data?.artists[0]?.alias || 'Unknown Artist'
+
     const card = `
-          <div id="${
-  data.key
-}" class="flex flex-col gap-2 p-4 h-full rounded-2xl bg-[#1C1F26] drop-shadow-md border-2 border-[#a8b3cf33;] hover:border-[#1ED760;] card-color">
+          <div id="${data.key}" class="flex flex-col gap-2 p-4 h-full rounded-2xl bg-[#1C1F26] drop-shadow-md border-2 border-[#a8b3cf33;] hover:border-[#1ED760;] card-color">
             <div class="w-full h-[250px] rounded-lg overflow-hidden image-container">
-              <img class="h-[250px] w-auto rounded-lg mx-auto" src="${
-  data.images?.coverart
-                || data.images?.background
-                || `https://dummyimage.com/400x400/000/1aff00&text=${data.title}`
-}" />
+              <img class="h-[250px] w-auto rounded-lg mx-auto" src="${data.images?.coverart || data.images?.background || `https://dummyimage.com/400x400/000/1aff00&text=${data.title}`}" />
             </div>
             <div class="flex flex-col gap-2 justify-between">
-              <a href="${data.url}" class="font-semibold text-lg capitalize custom-title cursor-pointer hover:text-[#1ED760]">${
-  data.title.length < 28
-    ? data.title
-    : `${data.title.substring(0, 25)}...`
-}</a>
-              <h5 class="text-[#777] -mt-2 uppercase">${data.artists[0].alias}</h5>
+              <a href="${data.url}" class="font-semibold text-lg capitalize custom-title cursor-pointer hover:text-[#1ED760]">${data.title.length < 28 ? data.title : `${data.title.substring(0, 25)}...`}</a>
+              <h5 class="text-[#777] -mt-2 uppercase">${artistsAlias}</h5>
               <div class="flex flex-col gap-1 justify-between">
                 <div class="flex justify-between p-1 items-center">
                   <span id="like-${data.key}" class="text-sm">no likes</span>

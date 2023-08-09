@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="./style.css" /> -->
-    <title>Js capstone</title>
+    <title>Spotify | Musical track website.</title>
   <script defer src="index.bundle.js"></script></head>
   <body class="bg-[#0e1217] text-white">
     <!-- Header -->
     <header class="border-b-2 border-[#a8b3cf33;] items-center">
       <div class="container mx-auto max-w-screen-xl">
-        <div class="flex justify-between px-6 h-[60px] items-center">
+        <div
+          class="flex justify-center sm:justify-between px-6 h-[60px] items-center"
+        >
           <a href="#">
             <svg
               class="h-[40px] py-1 hover:opacity-100"
@@ -27,7 +29,7 @@
               />
             </svg>
           </a>
-          <nav>
+          <nav class="hidden sm:block">
             <ul class="flex gap-4">
               <li class="hover:text-[#1ED760] cursor-pointer" id="charts">
                 TOP CHARTS
