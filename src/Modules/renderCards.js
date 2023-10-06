@@ -7,7 +7,13 @@ const renderCards = (array) => {
   let htmlToAppend = '';
   array.forEach((data) => {
 
-    const artistsAlias = data?.artists[0]?.alias || 'Unknown Artist'
+    let artistsAlias = ''
+
+    if(data?.artists === undefined) {
+      artistsAlias = 'Unknown Artist'
+    } else {
+      artistsAlias = data?.artists[0]?.alias || 'Unknown Artist'
+    }
 
     const card = `
           <div id="${data.key}" class="flex flex-col gap-2 p-4 h-full rounded-2xl bg-[#1C1F26] drop-shadow-md border-2 border-[#a8b3cf33;] hover:border-[#1ED760;] card-color">
