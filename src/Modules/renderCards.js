@@ -17,7 +17,7 @@ const renderCards = (array) => {
     const card = `
           <div id="${
             data.key
-          }" class="flex flex-col gap-2 p-4 h-full rounded-2xl bg-[#1C1F26] drop-shadow-md border-2 border-[#a8b3cf33;] hover:border-[#1ED760;] card-color">
+          }" class="flex flex-col gap-2 p-4 h-full rounded-2xl bg-[#1C1F26] drop-shadow-md border-2 border-[#a8b3cf33] hover:border-[#1ED760] card-color">
             <div class="w-full h-[250px] rounded-lg overflow-hidden image-container">
               <img loading="lazy" class="h-[250px] w-auto rounded-lg mx-auto" src="${
                 data.images?.coverart ||
@@ -26,12 +26,10 @@ const renderCards = (array) => {
               }" />
             </div>
             <div class="flex flex-col gap-2 justify-between">
-              <a href="${
-                data.url
-              }" class="font-semibold text-lg capitalize custom-title cursor-pointer hover:text-[#1ED760]">${
+              <a target="_blanck" href="${data.url}" class="font-semibold text-lg capitalize custom-title cursor-pointer line-clamp-1 hover:text-[#1ED760]">${
       data.title.length < 28 ? data.title : `${data.title.substring(0, 25)}...`
     }</a>
-              <h5 class="text-[#777] -mt-2 uppercase">${artistsAlias}</h5>
+              <h5 class="text-[#777] -mt-2 uppercase line-clamp-1">${artistsAlias}</h5>
               <div class="flex flex-col gap-1 justify-between">
                 <div class="flex justify-between p-1 items-center">
                   <span id="like-${data.key}" class="text-sm">no likes</span>
